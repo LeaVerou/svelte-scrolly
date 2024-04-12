@@ -1,0 +1,30 @@
+{
+  "name": "svelte-scrolly",
+  "version": "0.0.1-alpha.1",
+  "description": "A simple Svelte Scrolly component to facilitate narrative visualizations",
+  "main": "Scrolly.svelte",
+  "svelte": "Scrolly.svelte",
+  "files": [
+    "Scrolly.svelte"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leaverou/svelte-scrolly.git"
+  },
+  "keywords": [
+    "scrollytelling",
+    "svelte"
+  ],
+  "author": "Lea Verou",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/leaverou/svelte-scrolly/issues"
+  },
+  "homepage": "https://github.com/leaverou/svelte-scrolly#readme",
+  "devDependencies": {
+    "release-it": "^17.2.0"
+  }
+}

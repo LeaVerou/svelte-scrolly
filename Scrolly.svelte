@@ -139,7 +139,7 @@ onMount(() => {
 	max-height: 100vh;
 }
 
-@container style(--layout: viz-first) {
+@container style(--scrolly-layout: viz-first) {
 	.scrolly {
 		grid-template-columns: var(--scrolly-viz-width, 1fr) var(--scrolly-story-width, 1fr);
 	}
@@ -153,7 +153,7 @@ onMount(() => {
 	}
 }
 
-@container style(--layout: overlap) {
+@container style(--scrolly-layout: overlap) {
 	.scrolly {
 		grid-template-columns: 1fr;
 	}

@@ -139,7 +139,7 @@ onMount(() => {
 	max-height: 100vh;
 }
 
-@container style(--layout: viz story) {
+@container style(--layout: viz-first) {
 	.scrolly {
 		grid-template-columns: var(--scrolly-viz-width, 1fr) var(--scrolly-story-width, 1fr);
 	}

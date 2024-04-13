@@ -14,6 +14,8 @@ which is not always what we want.
 It assumes a structure where there is content that actually scrolls (the story) and content that sticks (the visualization).
 Scrollies where nothing is actually scrolling are out of scope for this component.
 
+<video src="https://vis-society.github.io/labs/9/videos/final.mp4"></video>
+
 ## Installation
 
 ```bash
@@ -47,6 +49,7 @@ E.g. `--scrolly-viz-width="2fr"` will change the proportion of viz to story to 2
 ### Props
 
 | Prop | Description | Type | Default |
+|------|-------------|------|---------|
 | `progress` | The progress of the scrolly. | `number` (0 - 100) | `0` |
 | `progressRaw` | The progress of the scrolly, unclamped (i.e. can be negative or > 100). | `number` | `0` |
 | `threshold` | What % of the viewport does the scrolly need to reach for it to start? | `number` (0 - 1) | `0.5` |
@@ -59,7 +62,8 @@ E.g. `--scrolly-viz-width="2fr"` will change the proportion of viz to story to 2
 All CSS properties supported:
 
 | Property | Description | Type | Default |
-| `--scrolly-layout` | Layout of the scrolly. Requires [style query support](https://caniuse.com/css-container-queries-style). | `story viz` &#124; `viz story` &#124; `overlap` | `story viz` |
+|----------|-------------|------|---------|
+| `--scrolly-layout` | Layout of the scrolly. Requires [style query support](https://caniuse.com/css-container-queries-style). | `story-first` &#124; `viz-first` &#124; `overlap` | `story viz` |
 | `--scrolly-gap` | Gap between the story and the visualization. Ignored when `--layout: overlap`. | `<length>` | `1em` |
 | `--scrolly-viz-width`, `--scrolly-story-width` | Width of the visualization or the story respectively. Ignored when `--layout: overlap`. | `<length>` | `1fr` |
 | `--scrolly-viz-top` | Offset of the visualization from the top of the viewport when stuck. | `<length>` | Same as `margin` prop |

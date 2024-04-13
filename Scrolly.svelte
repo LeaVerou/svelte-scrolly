@@ -4,7 +4,7 @@ import { onMount } from "svelte";
 export let progress = 0;
 export let progressRaw = 0;
 export let threshold = 0.5;
-export let margin = 20;
+export let margin = 30;
 export let debounce = false;
 export let throttle = false;
 
@@ -49,7 +49,7 @@ $: {
 onMount(() => {
 	function calculateProgress ({top = container.getBoundingClientRect().top} = {}) {
 		progressRaw = getProgress(top, minTop, maxTop);
-		// console.table({minTop, maxTop, pageTop, top, progress, progressUnclamped});
+		// console.table({ minTop, maxTop, pageTop, top, progress, progressRaw });
 		updateProgress();
 	}
 
@@ -75,10 +75,10 @@ onMount(() => {
 		minTop = Math.min(pageTop, innerHeight * threshold) + margin;
 
 		// progress = 100 when the bottom of the container is at the bottom of the viewport (minus the margin),
-		// except when this is not possible
-		maxTop = innerHeight - rect.height - margin;
+		maxTop = innerHeight - rect.height + margin;
 
 		calculateProgress(rect);
+		// console.table({margin, minTop, maxTop, pageTop, top: rect.top, height: rect.height, progress, progressRaw });
 	}
 
 	intersectionObserver = new IntersectionObserver(entries => {

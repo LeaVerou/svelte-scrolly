@@ -110,7 +110,7 @@ onMount(() => {
 });
 </script>
 
-<section class="scrolly" bind:this={container}>
+<section class="scrolly" bind:this={container} style="--scrolly-margin: { margin }">
 	<section class="story">
 		<slot />
 	</section>
@@ -135,7 +135,7 @@ onMount(() => {
 
 .viz {
 	position: sticky;
-	top: var(--viz-margin-top, 1em);
+	top: max(var(--scrolly-margin, 0) * 1px, var(--scrolly-viz-top, 2em));
 	max-height: 100vh;
 }
 

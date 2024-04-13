@@ -1,6 +1,6 @@
 {
   "name": "svelte-scrolly",
-  "version": "0.0.1-alpha.1",
+  "version": "0.0.1",
   "description": "A basic scrollytelling component for Svelte to facilitate narrative visualizations",
   "main": "Scrolly.svelte",
   "svelte": "Scrolly.svelte",

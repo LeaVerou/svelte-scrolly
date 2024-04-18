@@ -4,6 +4,9 @@
   "description": "A basic scrollytelling component for Svelte to facilitate narrative visualizations",
   "main": "Scrolly.svelte",
   "svelte": "Scrolly.svelte",
+  "exports": {
+    "svelte": "./Scrolly.svelte"
+  },
   "files": [
     "Scrolly.svelte"
   ],
